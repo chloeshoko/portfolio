@@ -121,6 +121,8 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 /* Old-style serif, for a definition or etymology */
 .oldstyle { font-family: var(--oldstyle); }
 
+.contact li + li { border-top: 1px solid var(--rule); padding-top: 0.75rem; margin-top: 0.25rem; }
+
 /* Phones */
 @media (max-width: 40rem) {
   .home .menu { gap: 0.5rem 1.25rem; }
