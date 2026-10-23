@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chloe Shoko — Journalism, documentary, design</title>
+  <meta name="description" content="Portfolio of Chloe Shoko: print journalism, documentary film and design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top">Chloe Shoko</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="resume.pdf">Resume</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <h1>I report, film and design stories about the places people call home.</h1>
+      <p class="lede">Print journalist and documentary maker based in New York. Below is a selection of published work.</p>
+    </section>
+
+    <section id="work" class="work" aria-labelledby="work-heading">
+      <div class="work-head">
+        <h2 id="work-heading">Selected work</h2>
+        <div class="filters" role="group" aria-label="Filter work">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="print" aria-pressed="false">Print</button>
+          <button type="button" data-filter="documentary" aria-pressed="false">Documentary</button>
+          <button type="button" data-filter="design" aria-pressed="false">Design</button>
+        </div>
+      </div>
+
+      <!--
+        To add a piece: copy one <li> below, change data-kind to
+        print, documentary or design, and update the link, title, outlet and year.
+      -->
+      <ol class="index">
+        <li data-kind="print">
+          <a href="#">
+            <span class="title">The last laundromat on Atlantic Avenue</span>
+            <span class="outlet">The Brooklyn Paper</span>
+            <span class="kind">Print</span>
+            <span class="year">2026</span>
+          </a>
+        </li>
+        <li data-kind="documentary">
+          <a href="#">
+            <span class="title">Night Shift, a 14-minute short</span>
+            <span class="outlet">Independent</span>
+            <span class="kind">Documentary</span>
+            <span class="year">2026</span>
+          </a>
+        </li>
+        <li data-kind="print">
+          <a href="#">
+            <span class="title">Who keeps the community fridges full</span>
+            <span class="outlet">City Limits</span>
+            <span class="kind">Print</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li data-kind="design">
+          <a href="#">
+            <span class="title">Zine layout for a tenants’ union</span>
+            <span class="outlet">Self-published</span>
+            <span class="kind">Design</span>
+            <span class="year">2025</span>
+          </a>
+        </li>
+        <li data-kind="documentary">
+          <a href="#">
+            <span class="title">Ferry Regulars</span>
+            <span class="outlet">Student film festival</span>
+            <span class="kind">Documentary</span>
+            <span class="year">2024</span>
+          </a>
+        </li>
+        <li data-kind="print">
+          <a href="#">
+            <span class="title">Profile: the borough’s oldest crossing guard</span>
+            <span class="outlet">Campus newspaper</span>
+            <span class="kind">Print</span>
+            <span class="year">2024</span>
+          </a>
+        </li>
+        <li data-kind="design">
+          <a href="#">
+            <span class="title">Poster series for a local film night</span>
+            <span class="outlet">Commission</span>
+            <span class="kind">Design</span>
+            <span class="year">2024</span>
+          </a>
+        </li>
+      </ol>
+      <p class="empty" hidden>Nothing here yet.</p>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <div class="about-body">
+        <p>I’m a journalist who works across print and film. My reporting focuses on neighborhoods, labor and the small institutions that hold communities together. I also design zines, posters and layouts for independent projects.</p>
+        <p>I’m available for freelance reporting, documentary work and editorial design.</p>
+        <ul class="contact">
+          <li><a href="resume.pdf">Download my resume (PDF)</a></li>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Vimeo</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Chloe Shoko</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
