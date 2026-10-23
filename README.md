@@ -6,7 +6,7 @@ A simple portfolio for print journalism, documentary and design work.
 
 - **Add a piece of work:** in `index.html`, copy one `<li>` inside the `<ol class="index">` list. Set `data-kind` to `print`, `documentary` or `design`, then update the link, title, outlet and year.
 - **Resume:** upload your resume to this repository as `resume.pdf` (same name, top level). The Resume links point to it.
-- **About and contact:** edit the text and links in the About section of `index.html`.
+- **About and connect:** edit the text and links in the About section of `index.html`.
 - **Colors and fonts:** the variables at the top of `style.css`.
 
 ## Publishing with GitHub Pages

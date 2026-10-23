@@ -4,7 +4,7 @@
   --muted: #5f6468;
   --rule: #d3d6d2;
   --accent: #2d3a8c;
-  --serif: "Spectral", Georgia, serif;
+  --serif: "Libre Caslon Text", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
   --oldstyle: "IM Fell English", Garamond, serif;
 }
@@ -63,9 +63,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .home .menu { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
 
 /* Bio on the opening page */
-.home-bio { max-width: 34rem; }
-.home-bio p { font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; }
-.home-bio p:last-child { margin-bottom: 0; color: var(--muted); }
+.home-bio { max-width: 30rem; }
+.home-bio p { font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; text-wrap: pretty; }
 
 /* Inner pages */
 .site-header {
@@ -113,8 +112,8 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .work.with-images .outlet { grid-column: auto; }
 .work.with-images a:hover img { border-color: var(--accent); }
 
-/* Contact page */
-.contact {
+/* connect page */
+.connect {
   list-style: none;
   margin: 0;
   padding: 1.25rem 0 0;
@@ -124,9 +123,8 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
   font-family: var(--serif);
   font-size: 1.5rem;
 }
-.contact li + li { border-top: 1px solid var(--rule); padding-top: 0.75rem; margin-top: 0.5rem; }
-.contact a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-.contact a:hover { color: var(--accent); }
+.connect a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.connect a:hover { color: var(--accent); }
 .page .intro { max-width: 36rem; color: var(--muted); margin: -1.5rem 0 2.5rem; }
 
 /* Old-style serif, for a definition or etymology */
