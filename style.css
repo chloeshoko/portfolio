@@ -78,6 +78,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .page h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.25rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 2.5rem; }
 
+/* Work lists */
 .work { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
 .work li { border-bottom: 1px solid var(--rule); }
 .work a { display: grid; grid-template-columns: 1fr auto; gap: 0.25rem 1.5rem; padding: 1.25rem 0; text-decoration: none; }
@@ -86,37 +87,37 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .work .outlet { grid-column: 1 / -1; color: var(--muted); font-size: 0.9375rem; }
 .work a:hover .title { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 
-.contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; font-family: var(--serif); font-size: 1.5rem; }
-.contact a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-.contact a:hover { color: var(--accent); }
-.page .intro { max-width: 36rem; color: var(--muted); margin: -1.5rem 0 2.5rem; }
-
-@media (max-width: 40rem) {
-  .home .menu { gap: 0.5rem 1.25rem; }
-  .site-header { justify-content: center; text-align: center; }
-  .site-header .menu { justify-content: center; }
-}
-
 /* Work lists with images */
 .work.with-images a {
-  display: grid;
-  grid-template-columns: 16rem 1fr;
+  grid-template-columns: 13rem 1fr;
   gap: 1.5rem;
   align-items: start;
   padding: 1.5rem 0;
 }
 .work.with-images img {
+  display: block;
   width: 100%;
+  max-width: 13rem;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: top;
+  object-position: top left;
   border: 1px solid var(--rule);
-  background: var(--rule);
 }
 .work.with-images .text { display: flex; flex-direction: column; gap: 0.35rem; }
 .work.with-images .outlet { grid-column: auto; }
 .work.with-images a:hover img { border-color: var(--accent); }
 
+/* Contact page */
+.contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; font-family: var(--serif); font-size: 1.5rem; }
+.contact a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.contact a:hover { color: var(--accent); }
+.page .intro { max-width: 36rem; color: var(--muted); margin: -1.5rem 0 2.5rem; }
+
+/* Phones */
 @media (max-width: 40rem) {
+  .home .menu { gap: 0.5rem 1.25rem; }
+  .site-header { justify-content: center; text-align: center; }
+  .site-header .menu { justify-content: center; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
+  .work.with-images img { max-width: 100%; }
 }
