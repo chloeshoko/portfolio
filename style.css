@@ -113,10 +113,10 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .connect a:hover { color: var(--accent); }
 .page .intro { max-width: 36rem; color: var(--muted); margin: -1.5rem 0 2.5rem; }
 
-/* Bio on the contact page */
-.bio { max-width: 36rem; margin-bottom: 3rem; }
-.bio p { font-family: var(--serif); font-size: 1.25rem; line-height: 1.6; margin: 0 0 1.1rem; }
-.bio + .contact { padding-top: 2rem; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 1.0625rem; }
+/* Bio on the opening page */
+.home-bio { max-width: 34rem; }
+.home-bio p { font-family: var(--serif); font-size: 1.1875rem; line-height: 1.6; margin: 0 0 1rem; }
+.home-bio p:last-child { margin-bottom: 0; color: var(--muted); }
 
 /* Phones */
 @media (max-width: 40rem) {
