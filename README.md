@@ -11,4 +11,6 @@ A simple portfolio for print journalism, documentary and design work.
 
 ## Publishing with GitHub Pages
 
-Settings → Pages → under "Build and deployment", choose **Deploy from a branch**, pick `main` and `/ (root)`, then Save. The site appears at `https://chloeshoko.github.io/portfolio/` within a few minutes.
+The site deploys automatically with GitHub Actions (`.github/workflows/pages.yml`) every time you push to `main`.
+
+One-time setup: Settings → Pages → under "Build and deployment", set **Source** to **GitHub Actions**. The site appears at `https://chloeshoko.github.io/portfolio/`. Check deploy progress in the repository's **Actions** tab.
