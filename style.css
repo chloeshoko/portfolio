@@ -107,11 +107,16 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .work.with-images .outlet { grid-column: auto; }
 .work.with-images a:hover img { border-color: var(--accent); }
 
-/* Contact page */
-.contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; font-family: var(--serif); font-size: 1.5rem; }
-.contact a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-.contact a:hover { color: var(--accent); }
+/*  page */
+.connect { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; font-family: var(--serif); font-size: 1.5rem; }
+.connect a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.connect a:hover { color: var(--accent); }
 .page .intro { max-width: 36rem; color: var(--muted); margin: -1.5rem 0 2.5rem; }
+
+/* Bio on the contact page */
+.bio { max-width: 36rem; margin-bottom: 3rem; }
+.bio p { font-family: var(--serif); font-size: 1.25rem; line-height: 1.6; margin: 0 0 1.1rem; }
+.bio + .contact { padding-top: 2rem; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 1.0625rem; }
 
 /* Phones */
 @media (max-width: 40rem) {
@@ -121,3 +126,4 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
   .work.with-images img { max-width: 100%; }
 }
+
