@@ -4,8 +4,9 @@
   --muted: #5f6468;
   --rule: #d3d6d2;
   --accent: #2d3a8c;
-  --serif: "Newsreader", Georgia, serif;
-  --sans: "Hanken Grotesk", system-ui, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --oldstyle: "IM Fell English", Garamond, serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,8 +27,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 1.0625rem;
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -47,19 +48,23 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  padding: 2rem 1.25rem;
+  padding: 3rem 1.25rem;
   text-align: center;
 }
 .home h1 {
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(2.5rem, 7vw, 3.75rem);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-size: clamp(3rem, 8vw, 4.75rem);
+  line-height: 1;
 }
-.home .role { margin: 0.9rem 0 0; color: var(--muted); font-size: 1.125rem; }
+.home .role { margin: 0.9rem 0 0; color: var(--muted); font-size: 1.0625rem; }
 .home .menu { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+
+/* Bio on the opening page */
+.home-bio { max-width: 34rem; }
+.home-bio p { font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; }
+.home-bio p:last-child { margin-bottom: 0; color: var(--muted); }
 
 /* Inner pages */
 .site-header {
@@ -72,19 +77,19 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   margin: 0 auto;
   padding: 2rem 1.25rem;
 }
-.site-header .name { font-family: var(--serif); font-size: 1.375rem; text-decoration: none; }
-.site-header .menu { gap: 0.5rem 1.5rem; font-size: 1rem; }
+.site-header .name { font-family: var(--serif); font-size: 1.625rem; text-decoration: none; }
+.site-header .menu { gap: 0.5rem 1.5rem; font-size: 0.9375rem; }
 
 main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
-.page h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.25rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 2.5rem; }
+.page h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.75rem, 6vw, 3.75rem); line-height: 1.05; margin: 0 0 2.5rem; }
 
 /* Work lists */
 .work { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
 .work li { border-bottom: 1px solid var(--rule); }
 .work a { display: grid; grid-template-columns: 1fr auto; gap: 0.25rem 1.5rem; padding: 1.25rem 0; text-decoration: none; }
-.work .title { font-family: var(--serif); font-size: 1.375rem; line-height: 1.25; }
-.work .year { color: var(--muted); font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
-.work .outlet { grid-column: 1 / -1; color: var(--muted); font-size: 0.9375rem; }
+.work .title { font-family: var(--serif); font-size: 1.625rem; line-height: 1.2; }
+.work .year { color: var(--muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+.work .outlet { grid-column: 1 / -1; color: var(--muted); font-size: 0.875rem; }
 .work a:hover .title { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 
 /* Work lists with images */
@@ -107,16 +112,14 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .work.with-images .outlet { grid-column: auto; }
 .work.with-images a:hover img { border-color: var(--accent); }
 
-/*  page */
-.connect { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; font-family: var(--serif); font-size: 1.5rem; }
-.connect a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-.connect a:hover { color: var(--accent); }
+/* Contact page */
+.contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; font-family: var(--serif); font-size: 1.75rem; }
+.contact a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.contact a:hover { color: var(--accent); }
 .page .intro { max-width: 36rem; color: var(--muted); margin: -1.5rem 0 2.5rem; }
 
-/* Bio on the opening page */
-.home-bio { max-width: 34rem; }
-.home-bio p { font-family: var(--serif); font-size: 1.1875rem; line-height: 1.6; margin: 0 0 1rem; }
-.home-bio p:last-child { margin-bottom: 0; color: var(--muted); }
+/* Old-style serif, for a definition or etymology */
+.oldstyle { font-family: var(--oldstyle); }
 
 /* Phones */
 @media (max-width: 40rem) {
@@ -126,4 +129,3 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
   .work.with-images img { max-width: 100%; }
 }
-
