@@ -96,3 +96,27 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
   .site-header { justify-content: center; text-align: center; }
   .site-header .menu { justify-content: center; }
 }
+
+/* Work lists with images */
+.work.with-images a {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem 0;
+}
+.work.with-images img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+.work.with-images .text { display: flex; flex-direction: column; gap: 0.35rem; }
+.work.with-images .outlet { grid-column: auto; }
+.work.with-images a:hover img { border-color: var(--accent); }
+
+@media (max-width: 40rem) {
+  .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
+}
