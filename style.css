@@ -112,6 +112,7 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .work.with-images .text { display: flex; flex-direction: column; gap: 0.35rem; }
 .work.with-images .outlet { grid-column: auto; }
 .work.with-images a:hover img { border-color: var(--accent); }
+.work.video img { aspect-ratio: 16 / 9; object-position: center; }
 
 /* connect page */
 .connect {
