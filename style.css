@@ -60,10 +60,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   letter-spacing: -0.01em;
 }
 .home .role { margin: 0.9rem 0 0; color: var(--muted); font-size: 1.0625rem; }
-.home .menu { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+.home .menu { padding-bottom: 1.5rem; border-bottom: 1px solid var(--ink); }
 
 /* Bio on the opening page */
-.home-bio { max-width: 30rem; }
+.home-bio { max-width: 40rem; }
 .home-bio p { font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; text-wrap: pretty; }
 
 /* Inner pages */
