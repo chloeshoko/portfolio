@@ -9,14 +9,12 @@
   --oldstyle: "IM Fell English", Garamond, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #17191b;
-    --ink: #e8eae7;
-    --muted: #9da2a6;
-    --rule: #33373a;
-    --accent: #a3b0f2;
-  }
+:root[data-theme="dark"] {
+  --paper: #17191b;
+  --ink: #e8eae7;
+  --muted: #9da2a6;
+  --rule: #33373a;
+  --accent: #a3b0f2;
 }
 
 * { box-sizing: border-box; }
@@ -39,6 +37,23 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2.25rem; font-weight: 500; }
 .menu a { color: var(--muted); text-decoration: none; }
 .menu a:hover, .menu a[aria-current="page"] { color: var(--accent); text-decoration: underline; text-underline-offset: 0.25em; text-decoration-thickness: 1px; }
+
+/* Light/dark toggle, at the end of the menu */
+.theme-toggle {
+  display: inline-flex;
+  align-self: center;
+  padding: 0.15rem;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.theme-toggle svg { width: 1.1rem; height: 1.1rem; fill: currentColor; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.theme-toggle .moon { stroke: none; }
+.theme-toggle .sun, [data-theme="dark"] .theme-toggle .moon { display: none; }
+[data-theme="dark"] .theme-toggle .sun { display: block; }
 
 /* Opening page */
 .home {
