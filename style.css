@@ -79,23 +79,23 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .home-body { display: flex; align-items: stretch; justify-content: center; gap: 3rem; }
 .home .headshot {
   display: block;
-  width: 27rem;
+  width: 22rem;
   max-width: 55vw;
   aspect-ratio: 756 / 811;
   object-fit: cover;
 }
 .home .menu {
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between; /* spread the links down the full height of the photo */
-  gap: 0.6rem;
+  gap: 0.25rem;
   padding: 0.25rem 2.5rem 0.25rem 0;
   border-right: 1px solid var(--ink);
-  font-size: 1.75rem;
-  text-align: right;
+  font-size: 1.5rem;
+  text-align: center;
 }
 .home .menu .dot { color: var(--muted); line-height: 1; }
-.home .theme-toggle { align-self: flex-end; }
+.home .theme-toggle { align-self: center; }
 .home .theme-toggle svg { width: 1.5rem; height: 1.5rem; }
 
 /* About page */
