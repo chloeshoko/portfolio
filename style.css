@@ -99,7 +99,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* About page */
 .about { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
-.about p { max-width: 40rem; font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; text-wrap: pretty; }
+.about p { max-width: 46rem; font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; }
+.about a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.about a:hover { color: var(--accent); }
 
 /* Inner pages */
 .site-header {
