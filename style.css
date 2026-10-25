@@ -229,6 +229,12 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .comic-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .comic-controls .count { color: var(--muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; min-width: 9rem; text-align: center; }
 
+/* Single design pieces, each on its own page */
+.piece { margin: 0; }
+.piece img { display: block; width: auto; max-width: 100%; margin: 0 auto; border: 1px solid var(--rule); }
+.piece-tall img { max-height: 85vh; }
+.piece-long img { max-width: min(100%, 40rem); }
+
 /* connect page */
 .connect {
   list-style: none;
