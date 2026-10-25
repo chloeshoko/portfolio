@@ -189,7 +189,9 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .gallery a:hover img { border-color: var(--accent); }
 .gallery a:hover .title { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 
-/* Just for Fun: comic pages, one after another */
+/* Just for Fun, at the bottom of the Design page: comic pages, one after another */
+.fun { margin-top: 5rem; }
+.fun h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.75rem, 4vw, 2.25rem); line-height: 1.1; margin: 0 0 2.5rem; }
 .comic {
   list-style: none;
   margin: 0 auto;
