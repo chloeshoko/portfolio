@@ -74,7 +74,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   line-height: 1.05;
   letter-spacing: -0.01em;
 }
-.home .role { margin: 0.75rem 0 0; color: var(--muted); font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+.home .role { margin: 0.75rem 0 0; color: var(--ink); font-size: clamp(1.25rem, 3vw, 1.875rem); }
 /* Menu listed down the left, photo on the right */
 .home-body { display: flex; align-items: stretch; justify-content: center; gap: 3rem; }
 .home .headshot {
@@ -94,6 +94,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   font-size: 1.75rem;
   text-align: right;
 }
+.home .menu .dot { color: var(--muted); line-height: 1; }
 .home .theme-toggle { align-self: flex-end; }
 .home .theme-toggle svg { width: 1.5rem; height: 1.5rem; }
 
