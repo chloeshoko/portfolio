@@ -70,32 +70,32 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(2.5rem, 7vw, 3.75rem);
+  font-size: clamp(2.25rem, 6vw, 3.25rem);
   line-height: 1.05;
   letter-spacing: -0.01em;
 }
-.home .role { margin: 0.9rem 0 0; color: var(--muted); font-size: 1.0625rem; }
-/* Photo on the left, menu listed down the right */
+.home .role { margin: 0.75rem 0 0; color: var(--muted); font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+/* Menu listed down the left, photo on the right */
 .home-body { display: flex; align-items: stretch; justify-content: center; gap: 3rem; }
 .home .headshot {
   display: block;
-  width: 21rem;
-  max-width: 50vw;
+  width: 27rem;
+  max-width: 55vw;
   aspect-ratio: 756 / 811;
   object-fit: cover;
 }
 .home .menu {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between; /* spread the links down the full height of the photo */
   gap: 0.6rem;
-  padding-left: 2.5rem;
-  border-left: 1px solid var(--ink);
-  font-size: 1.5rem;
-  text-align: left;
+  padding: 0.25rem 2.5rem 0.25rem 0;
+  border-right: 1px solid var(--ink);
+  font-size: 1.75rem;
+  text-align: right;
 }
-.home .theme-toggle { align-self: flex-start; }
-.home .theme-toggle svg { width: 1.35rem; height: 1.35rem; }
+.home .theme-toggle { align-self: flex-end; }
+.home .theme-toggle svg { width: 1.5rem; height: 1.5rem; }
 
 /* About page */
 .about { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
@@ -294,7 +294,7 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 /* Phones */
 @media (max-width: 40rem) {
   .home-body { gap: 1.5rem; }
-  .home .menu { padding-left: 1.25rem; font-size: 1.0625rem; }
+  .home .menu { padding-right: 1.25rem; font-size: 1.0625rem; }
   .site-header { justify-content: center; text-align: center; }
   .site-header .menu { justify-content: center; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }

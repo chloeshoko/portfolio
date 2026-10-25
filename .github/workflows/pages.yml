@@ -22,9 +22,34 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # Encrypts every page behind one password (the STATICRYPT_PASSWORD repository secret).
+      # Visitors enter it once; their browser remembers it for every page after that.
+      - name: Password-protect the pages
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
+        run: |
+          if [ -z "$STATICRYPT_PASSWORD" ]; then
+            echo "Add a repository secret named STATICRYPT_PASSWORD (Settings > Secrets and variables > Actions)."
+            exit 1
+          fi
+          mkdir _site
+          rsync -a --exclude .git --exclude .github --exclude _site --exclude password-template.html --exclude README.md ./ _site/
+          cd _site
+          npx -y staticrypt@3.5.4 *.html -d . --short -c false \
+            --salt 32f4286531c18e4344c88dd26b903b5a \
+            -t ../password-template.html \
+            --template-title "Chloe Shōko Rogers" \
+            --template-instructions "Enter the password to view the portfolio." \
+            --template-button "Enter" \
+            --template-error "That password isn't right." \
+            --template-color-primary "#2d3a8c" \
+            --template-color-secondary "#f4f5f3"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
