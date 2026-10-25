@@ -246,8 +246,8 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
   font-family: var(--serif);
   font-size: 1.5rem;
 }
-.connect a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-.connect a:hover { color: var(--accent); }
+.connect a { text-decoration: none; }
+.connect a:hover { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 .page .intro { max-width: 36rem; color: var(--muted); margin: -1.5rem 0 2.5rem; }
 
 /* Old-style serif, for a definition or etymology */
