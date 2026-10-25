@@ -75,15 +75,25 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   letter-spacing: -0.01em;
 }
 .home .role { margin: 0.9rem 0 0; color: var(--muted); font-size: 1.0625rem; }
-.home .menu { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+/* Photo on the left, menu listed down the right */
+.home-body { display: flex; align-items: center; justify-content: center; gap: 3rem; }
 .home .headshot {
   display: block;
-  width: 13rem;
-  max-width: 60vw;
+  width: 15rem;
+  max-width: 45vw;
   aspect-ratio: 756 / 811;
-  margin: 0 auto 2rem;
   object-fit: cover;
 }
+.home .menu {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding-left: 2.25rem;
+  border-left: 1px solid var(--ink);
+  font-size: 1.125rem;
+  text-align: left;
+}
+.home .theme-toggle { align-self: flex-start; margin-top: 0.4rem; }
 
 /* About page */
 .about { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
@@ -263,7 +273,8 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 
 /* Phones */
 @media (max-width: 40rem) {
-  .home .menu { gap: 0.5rem 1.25rem; }
+  .home-body { gap: 1.5rem; }
+  .home .menu { padding-left: 1.25rem; font-size: 1rem; }
   .site-header { justify-content: center; text-align: center; }
   .site-header .menu { justify-content: center; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
