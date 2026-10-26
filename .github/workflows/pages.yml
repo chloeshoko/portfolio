@@ -44,7 +44,7 @@ jobs:
             --template-title "Chloe Shōko Rogers" \
             --template-button "Enter" \
             --template-error "That password isn't right." \
-            --template-color-primary "#2d3a8c" \
+            --template-color-primary "#1e2124" \
             --template-color-secondary "#f4f5f3"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
