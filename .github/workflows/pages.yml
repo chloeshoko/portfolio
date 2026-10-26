@@ -42,7 +42,6 @@ jobs:
             --salt 32f4286531c18e4344c88dd26b903b5a \
             -t ../password-template.html \
             --template-title "Chloe Shōko Rogers" \
-            --template-instructions "Enter the password to view the portfolio." \
             --template-button "Enter" \
             --template-error "That password isn't right." \
             --template-color-primary "#2d3a8c" \

@@ -211,6 +211,12 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .gallery .caption { color: var(--muted); font-size: 0.9375rem; text-wrap: pretty; }
 .gallery a:hover img { border-color: var(--accent); }
 .gallery a:hover .title { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+/* "View full …" prompt under each piece, so it's clear the cards open */
+.gallery .more, .fun-card .more { margin-top: 0.25rem; color: var(--accent); font-size: 0.9375rem; font-weight: 500; }
+.gallery a:hover .more, .fun-card:hover .more { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.gallery img, .fun-card img { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.gallery a:hover img, .fun-card:hover img { transform: translateY(-3px); box-shadow: 0 8px 20px rgb(0 0 0 / 0.12); }
+@media (prefers-reduced-motion: reduce) { .gallery img, .fun-card img { transition: none; } }
 
 /* Comics, at the bottom of the Design page */
 .fun { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--ink); }
