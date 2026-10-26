@@ -208,7 +208,7 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
   margin-bottom: 0.5rem;
 }
 .gallery .title { font-size: 1.1875rem; font-weight: 500; line-height: 1.35; }
-.gallery .caption { color: var(--muted); font-size: 0.9375rem; text-wrap: pretty; }
+.gallery .caption { color: var(--muted); font-size: 0.9375rem; }
 .gallery a:hover img { border-color: var(--accent); }
 .gallery a:hover .title { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 /* "View full …" prompt under each piece, so it's clear the cards open */
@@ -224,7 +224,7 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 .fun-card { display: flex; flex-direction: column; gap: 0.35rem; max-width: 16rem; text-decoration: none; }
 .fun-card img { display: block; width: 100%; border: 1px solid var(--rule); margin-bottom: 0.5rem; }
 .fun-card .title { font-size: 1.1875rem; font-weight: 500; line-height: 1.35; font-style: italic; }
-.fun-card .caption { color: var(--muted); font-size: 0.9375rem; text-wrap: pretty; }
+.fun-card .caption { color: var(--muted); font-size: 0.9375rem; }
 .fun-card:hover img { border-color: var(--accent); }
 .fun-card:hover .title { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 
@@ -305,6 +305,9 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
   .site-header { justify-content: center; text-align: center; }
   .site-header .menu { justify-content: center; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
+  /* Stories without photos stack like the ones with photos: title, outlet, date */
+  .work:not(.with-images):not(.video) a { display: flex; flex-direction: column; gap: 0.35rem; }
+  .work:not(.with-images):not(.video) .year { order: 1; }
   .work.with-images img { max-width: 100%; }
   .work.video li { grid-template-columns: 1fr; gap: 1rem; }
   .gallery { grid-template-columns: 1fr; }
