@@ -79,31 +79,20 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   letter-spacing: -0.01em;
 }
 .home .role { margin: 0.75rem 0 0; color: var(--ink); font-size: clamp(1.25rem, 3vw, 1.875rem); }
-/* Menu listed down the left, photo on the right */
-.home-body { display: flex; align-items: stretch; justify-content: center; gap: 3rem; }
-.home .headshot {
-  display: block;
-  width: 22rem;
-  max-width: 55vw;
-  aspect-ratio: 756 / 811;
-  object-fit: cover;
-}
+/* Menu listed down the center */
 .home .menu {
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* spread the links down the full height of the photo */
-  gap: 0.25rem;
-  padding: 0.25rem 2.5rem 0.25rem 0;
-  border-right: 1px solid var(--ink);
+  gap: 0.4rem;
   font-size: 1.5rem;
-  text-align: center;
 }
 .home .menu .dot { color: var(--muted); line-height: 1; }
-.home .theme-toggle { align-self: center; }
+.home .theme-toggle { margin-top: 0.75rem; }
 .home .theme-toggle svg { width: 1.5rem; height: 1.5rem; }
 
 /* About page */
-.about { padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+.about { display: flex; align-items: flex-start; gap: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--ink); }
+.about .headshot { display: block; flex: none; width: 16rem; aspect-ratio: 756 / 811; object-fit: cover; }
 .about p { max-width: 46rem; font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; }
 .about a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 .about a:hover { color: var(--accent); }
@@ -304,8 +293,9 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 
 /* Phones */
 @media (max-width: 40rem) {
-  .home-body { gap: 1.5rem; }
-  .home .menu { padding-right: 1.25rem; font-size: 1.0625rem; }
+  .home .menu { font-size: 1.25rem; }
+  .about { flex-direction: column; gap: 1.5rem; }
+  .about .headshot { width: 100%; max-width: 18rem; }
   .site-header { justify-content: center; text-align: center; }
   .site-header .menu { justify-content: center; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
