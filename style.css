@@ -4,9 +4,10 @@
   --muted: #5f6468;
   --rule: #d3d6d2;
   --accent: #2d3a8c;
-  --serif: "Libre Caslon Text", Georgia, serif;
-  --sans: "Inter", system-ui, sans-serif;
-  --oldstyle: "IM Fell English", Garamond, serif;
+  /* EB Garamond is a free stand-in for Sabon; visitors who have Sabon installed see it instead */
+  --serif: "Sabon", "Sabon LT Std", "Sabon Next LT", "EB Garamond", Garamond, Georgia, serif;
+  --sans: var(--serif);
+  --oldstyle: var(--serif);
 }
 
 :root[data-theme="dark"] {
@@ -18,6 +19,9 @@
 }
 
 * { box-sizing: border-box; }
+
+/* Garamond runs small, so the whole site is scaled up a touch */
+html { font-size: 112.5%; }
 
 body {
   margin: 0;
