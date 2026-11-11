@@ -92,7 +92,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* About page */
 .about { display: flex; align-items: flex-start; gap: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--ink); }
-.about .headshot { display: block; flex: none; width: 16rem; aspect-ratio: 756 / 811; object-fit: cover; }
+.about .headshot { display: block; flex: none; order: 1; width: 11rem; aspect-ratio: 756 / 811; object-fit: cover; } /* sits to the right of the text */
 .about p { max-width: 46rem; font-size: 1.0625rem; line-height: 1.7; margin: 0 0 1rem; }
 .about a { text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 .about a:hover { color: var(--accent); }
@@ -295,7 +295,7 @@ main.page { max-width: 56rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; }
 @media (max-width: 40rem) {
   .home .menu { font-size: 1.25rem; }
   .about { flex-direction: column; gap: 1.5rem; }
-  .about .headshot { width: 100%; max-width: 18rem; }
+  .about .headshot { order: 0; width: 100%; max-width: 12rem; }
   .site-header { justify-content: center; text-align: center; }
   .site-header .menu { justify-content: center; }
   .work.with-images a { grid-template-columns: 1fr; gap: 1rem; }
